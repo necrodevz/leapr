@@ -1,10 +1,9 @@
 <odoo>
     <record model="ir.actions.server" id="update_calendar_from_inspection">
         <field name="name"> Update Calendar from Inspection</field>
-        <field name="model_id" ref="model_mail_activity"/>
+        <field name="model" ref="model_mail_activity"/>
         <field name="code">
-            object.save():
-                env['calendar.event'].sudo().create({'partner_ids': [object.x_technician_id, object.res_user_id],'start_datetime':object.date_deadline })
+            env['calendar.event'].sudo().create({'partner_ids': [object.x_technician_id, object.res_user_id],'start_datetime':object.date_deadline })
         </field>
     </record>
     <record>
