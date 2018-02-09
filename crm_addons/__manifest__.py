@@ -17,6 +17,7 @@
     # for the full list
     'category': 'Leapro',
     'version': '0.1',
+    'application': False,
 
     # any module necessary for this one to work correctly
     'depends': ['base', 'crm', 'sale','hr'],
