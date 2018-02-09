@@ -1,18 +1,11 @@
 <odoo>
-    <record model="ir.actions.server" id="update_calendar_from_inspection">
-        <field name="name"> Update Calendar from Inspection</field>
-        <field name="model" ref="model_calendar_event"/>
-        <field name="code">
-            
-        </field>
-    </record>
     <record>
         <field name="name">mail.activity.form.inherit.calendar.inspection</field>
         <field name="model">mail.activity</field>
         <field name="inherit_id" ref="mail_activity"/>
         <field name="arch" type="xml">
             <xpath expr="//button[@name='action_close_dialog']" position="replace">
-                <button string="Schedule a meeting" attrs="{'invisible': [('mail_activity_type', '!=', 'Inspection')]}" name="update_calendar_from_inspection" context="{'partner_ids': [object.x_technician_id, object.res_user_id],'start_datetime':object.date_deadline }" type="object" class="btn-primary"/>
+                <button string="Schedule Inspection" attrs="{'invisible': [('mail_activity_type', '!=', 'Inspection')]}" name="action_create_calendar_event" context="{'partner_ids': [object.x_technician_id, object.res_user_id],'start_datetime':object.date_deadline }" type="object" class="btn-primary"/>
             </xpath>
         </field>
     </record>
