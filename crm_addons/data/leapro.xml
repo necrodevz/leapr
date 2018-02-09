@@ -19,7 +19,7 @@
                     <button string="Schedule a meeting" attrs="{'invisible': [('mail_activity_type', '!=', 'Inspection')]}" name="update_calendar_from_inspection" type="object" class="btn-primary"/>
                 </xpath>
             </field>
-        <record>
+        </record>
         <!--  -->
     </data>
 </odoo>
